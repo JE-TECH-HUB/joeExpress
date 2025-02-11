@@ -1,0 +1,21 @@
+{
+      "editor.minimap.autohide": false,
+      "editor.minimap.enabled": false,
+      "diffEditor.wordWrap": "on",
+      "editor.inlineSuggest.edits.experimental.useInterleavedLinesDiff": "always",
+      "editor.inlineSuggest.edits.experimental.useMixedLinesDiff": "whenPossible",
+      "editor.quickSuggestions": {
+            "comments": "inline",
+            "strings": "inline"
+      },
+      "editor.quickSuggestionsDelay": 5,
+      "editor.suggest.selectionMode": "whenQuickSuggestion",
+      "editor.suggest.showIcons": true,
+      "editor.suggestFontSize": 6,
+      "files.autoGuessEncoding": true,
+      "files.autoSave": "afterDelay",
+      "editor.insertSpaces": false,
+      "editor.comments.insertSpace": false,
+      "editor.trimAutoWhitespace": false,
+      "liveServer.settings.port": 5501
+}
