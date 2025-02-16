@@ -1,15 +1,10 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
+
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
 .section{
 	padding:70px 0px;
+	
 }
 .section-title {
 	margin-bottom: 35px;
@@ -19,9 +14,7 @@ Version:	1.1
 	font-size: 25px;
 	margin-bottom: 12px;
 }
-.section-title p {
-	font-size: 13px;
-}
+
 .btn {
 	padding: 11px 20px;
 	font-weight: 400;
@@ -300,62 +293,30 @@ Version:	1.1
 .about-section {
 	margin-top: 100px;
 }
+
+
+.aboutBox{
+	display:flex;
+	align-items:center;
+	text-align:justify;
+	
+	p{
+	padding-inline:2em;
+	width:60%;
+	margin-right:-2em;
+	z-index:1;
+	}
+	img{
+	margin-left:-1em;
+	}
+	}
+
 .about-content h2 {
 	line-height: 32px;
 	font-size: 25px;
 }
 .about-content {
 	padding-bottom: 0;
-}
-.our-mission-content {
-	margin-left: 50px;
-	padding-top:0px;
-}
-.our-mission-content h2 {
-	line-height: 32px;
-	font-size: 25px;
-}
-.our-mission-image {
-	height: 400px;
-}
-.doctor-details-area .doctor-details-right {
-	padding-left: 0;
-	padding-top: 40px;
-}
-.doctor-details-item .doctor-name .name {
-	font-size: 24px;
-}
-.doctor-details-item .doctor-name .deg {
-	font-size: 19px;
-	margin: 5px 0 5px 0;
-}
-.doctor-details-item .doctor-name .degree {
-	font-size: 14px;
-}
-.login .login-left {
-	height: 400px;
-}
-.register .register-left {
-	height: 400px;
-}
-.pf-details .date ul li {
-	margin-right: 25px;
-	font-size: 13px;
-}
-.pf-details .body-text h3 {
-	font-size: 24px;
-	font-weight: 600;
-	color: #333;
-	margin-top: 30px;
-}
-.doctor-calendar-table table thead tr th {
-	font-size: 14px;
-}
-.doctor-calendar-table table tbody tr td h3 {
-	font-size: 14px;
-}
-.doctor-calendar-table table tbody tr td span.time {
-	font-size: 14px;
 }
 .footer .single-footer {
 	margin: 20px 0;
@@ -377,9 +338,7 @@ Version:	1.1
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
-.header.sticky{
-	
-}
+
 .header.sticky .header-bottom{
 	position:absolute;
 	z-index:999;
@@ -468,9 +427,7 @@ margin: 0;}
 	font-size: 22px;
 	margin-bottom: 10px;
 }
-.section-title p {
-	font-size: 13px;
-}
+
 
 .breadcrumbs {
 	padding: 60px 0;
@@ -975,7 +932,7 @@ margin: 0;}
 	margin-bottom: 10px;
 }
 .section-title p {
-	font-size: 13px;
+	font-size: 18px;
 }
 .btn {
 	padding: 11px 20px;
