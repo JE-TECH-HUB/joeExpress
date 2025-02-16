@@ -1,13 +1,7 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
+
 /*======================================
 [ CSS Table of contents ]
-* Global CSS
+
 * Header CSS
 	+ Topbar
 	+ Logo
@@ -51,8 +45,9 @@ Version:	1.1
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	font-size:14px;
+	font-size:18px;
 	color:#000;
+	.lineHeight{line-height:2rem;color:#2C2D3F;}
 }
 #scrollUp {
 	bottom: 15px;
@@ -80,7 +75,7 @@ body{
 	Start Header CSS 
 =====================*/
 .header{
-	background-color:#fff;
+	background-color:#ffffff5e;
 	position:relative;
 }
 .header .navbar-collapse{
@@ -91,9 +86,9 @@ body{
 	background-color:#fff;
 	border-bottom:1px solid #eee;
 }
-.header .topbar{
+/*.header .topbar{
 	padding:15px 0;
-}
+}*/
 .header .top-link{
 	float:left;
 }
@@ -666,23 +661,66 @@ transform: translateY(-50%);
 	End Schedule CSS
 ===============================*/
 /***ABOUT*****/
+
+
+.fadeSection{
+	animation: containerfadeOut linear forwards;
+	animation-timeline: view(-10vh 85vh);
+	/* p{
+	font-size: clamp(16px, 1.15vw, 20px);
+	line-height: 2em;
+	} */
+	}
+	@keyframes fadeOut {
+	from{scale: 1; opacity: 1;}
+	50%{scale: 0.7; opacity: 0.4;}
+	to{scale: 0.4; opacity: 0.4;}
+	}
+	@keyframes containerfadeOut {
+	from{scale: 1; opacity: 1;}
+	to{scale: 0.4; opacity: 0; }
+	}
+	
 .mobileContainerSpacing {position: relative;}
 .about-section{
 	text-align: center;
+	background:#ffff;
+
+
 	}
-	
-	.aboutSec{
-	display: flex;
-	aboutImg{
-	width: 50%;
+@media (width < 768px){
+
+	.Header{
+		height: 100px;
+		position: fixed;
+		top: 0;
+		left:0;
+		right:0;
+		bottom:80%;
+		}
+		
+		main{
+		position: fixed;
+		top: 20%;
+		left:0;
+		right:0;
+		bottom: 0;
+		overflow: scroll;
+		color:#2C2D3F;
+		}
+
+		
+		
+	.aboutImg{
+display: none;		
 	}
-	}
+				
+}
+
 	.about-section {
 	padding: 20px;
-	background-color: #f9f9f9; /* Light background */
-	color:DARKBLUE;
-	
 	border-radius: 8px;
+	
 	}
 	
 	.about-section h2 {
@@ -698,28 +736,41 @@ transform: translateY(-50%);
 	
 	}
 	
+	
+	
+	.offer{
+	text-align:center;
+	
+	p{
+	padding-top:1.5em;
+	padding-inline:0.5em;
+	}
+	}
+	
 	.whatWeOffer{
 	color:darkblue; 
 	font-size: small;
+	
 	position: absolute;
 	left: 0;
 	top:3em;
-	
 	}
+	
+	
 	
 	.left-header{
 	text-align: left;
 	display: flex;
 	position: relative;
 	font-family: serif;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	color: darkblue;
 	}
 	
 	.left-header::before{
 	content: '';
 	position: absolute;
-	width: 100%;
+	width: 80%;
 	height: 2px;
 	background:darkblue;
 	top: 0;
@@ -746,8 +797,21 @@ transform: translateY(-50%);
 	justify-items: center;
 	}
 
+#programmContainer{
+display:none}
 
-	
+.openProCon{
+display: fixed;
+flex-direction: column;
+position: absolute;
+top:0;
+left:5%;
+right:5%;
+bottom:0;
+background: #00000054;
+
+}
+
   .card {
  max-width: 300px;
   border: 1px solid #ddd;
@@ -811,6 +875,33 @@ height: 3px;
   background-color: #0405523a;
 }
 
+.readyContainer{
+margin-top: 3rem;
+}
+
+.ready{
+	color:#2C2D3F !important;
+}
+
+.teamPerson{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap:0.7em;
+	max-width: 300px;
+	margin: auto;
+	height: auto;
+	padding: 1em;
+	text-align: center;
+
+}
+
+.personImg{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
 /*=============================
 	Start Feautes CSS
 ===============================*/
@@ -879,7 +970,7 @@ height: 3px;
 
 /*=======================
 	Start Fun Facts CSS
-=========================*/
+=========================
 .fun-facts{
 	position:relative;
 }
@@ -945,7 +1036,7 @@ height: 3px;
 
 /*===================
 	Why choose CSS
-=====================*/
+=====================
 .why-choose .choose-left h3{
 	font-size:24px;
 	font-weight:600;
@@ -986,7 +1077,7 @@ height: 3px;
 	padding-left:2px;
 	margin-right:16px;
 }
-/* Start Faq CSS */
+/* Start Faq CSS 
 .why-choose{
 	background:#fff;
 }
@@ -1598,8 +1689,9 @@ height: 3px;
 	Start Pricing Table CSS
 ===============================*/
 .pricing-table{
-	background:#f9f9f9;
+	background:#fff;
 	position:relative;
+p{	color:#2C2D3F;}
 }
 .pricing-table .single-table {
 	background: #fff;
@@ -1634,7 +1726,7 @@ height: 3px;
 	display:inline-block;
 	font-size:14px;
 	font-weight:400;
-	color:#868686;
+	color:#2C2D3F;
 	margin-left:8px;
 }
 /* Table List */
@@ -1645,7 +1737,7 @@ height: 3px;
 }
 .pricing-table .table-list li {
 	position: relative;
-	color: #666;
+	color:#2C2D3F;
 	text-transform: capitalize;
 	margin-bottom: 18px;
 	padding-right: 32px;
@@ -1992,7 +2084,7 @@ height: 3px;
 	box-shadow: 0px 0px 10px #00000014;
 
 }
-.blog .single-news img{
+.blog .single-news,.teamPerson img{
 	width:50px;
 	height:50px;
     border-radius: 50%;
