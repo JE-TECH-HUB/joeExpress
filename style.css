@@ -67,6 +67,14 @@ body{
 #scrollUp:hover{
 	background:#2C2D3F;
 }
+
+.horizontal-line{
+	width: 50%;
+	margin: auto;
+	background: blue;
+	height: 2px;
+      margin-top: 1em;
+	}
 /*=============================
 	End Global CSS 
 ===============================*/
@@ -689,28 +697,6 @@ transform: translateY(-50%);
 
 	}
 @media (width < 768px){
-
-	.Header{
-		height: 100px;
-		position: fixed;
-		top: 0;
-		left:0;
-		right:0;
-		bottom:80%;
-		}
-		
-		main{
-		position: fixed;
-		top: 20%;
-		left:0;
-		right:0;
-		bottom: 0;
-		overflow: scroll;
-		color:#2C2D3F;
-		}
-
-		
-		
 	.aboutImg{
 display: none;		
 	}
@@ -725,7 +711,6 @@ display: none;
 	
 	.about-section h2 {
 		color:DARKBLUE; 
-		margin-bottom: 2em;
 	margin-top: 0px;
 	}
 	
@@ -787,7 +772,12 @@ display: none;
 	left: 0;
 	} 
 	
+.blueHr{
+width:50%;
+height: 5px;
+color:darkblue;
 
+}
 
 	
 .cards-container {
@@ -813,7 +803,7 @@ background: #00000054;
 }
 
   .card {
- max-width: 300px;
+ max-width: 350px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -891,17 +881,18 @@ margin-top: 3rem;
 	gap:0.7em;
 	max-width: 300px;
 	margin: auto;
-	height: auto;
 	padding: 1em;
 	text-align: center;
 
+	
+	img{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin: auto;
+		}
 }
 
-.personImg{
-width: 50px;
-height: 50px;
-border-radius: 50%;
-}
 /*=============================
 	Start Feautes CSS
 ===============================*/
@@ -967,178 +958,6 @@ border-radius: 50%;
 /*=============================
 	End Feautes CSS
 ===============================*/
-
-/*=======================
-	Start Fun Facts CSS
-=========================
-.fun-facts{
-	position:relative;
-}
-.fun-facts.section{
-	padding:120px 0;
-}
-.fun-facts{
-	background:url('img/fun-bg.jpg');
-	background-size:cover;
-	background-repeat:no-repeat;
-}
-.fun-facts .single-fun {
-	
-}
-.fun-facts .single-fun i {
-	position: absolute;
-	left: 0;
-	font-size: 62px;
-	color: #fff;
-	height: 70px;
-	width: 70px;
-	line-height: 67px;
-	font-size: 28px;
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	border: 2px solid #fff;
-	border-radius: 0px;
-	top: 50%;
-	margin-top: -35px;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	border-radius: 50%;
-}
-.fun-facts .single-fun:hover i{
-	color:DARKBLUE;
-	background:#fff;
-	border-color:transparent;
-}
-.fun-facts .single-fun .content {
-	padding-left: 80px;
-}
-.fun-facts .single-fun span {
-	color: #fff;
-	font-weight: 600;
-	font-size: 30px;
-	position: relative;
-	display: block;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	transition: all 0.4s eas;
-	display: block;
-	margin-bottom: 7px;
-}
-.fun-facts .single-fun p{
-	color:#fff;
-	font-size:15px;
-}
-/*===================
-	End Fun Facts
-=====================*/
-
-/*===================
-	Why choose CSS
-=====================
-.why-choose .choose-left h3{
-	font-size:24px;
-	font-weight:600;
-	color:#2C2D3F;
-	position:relative;
-	padding-bottom:20px;
-	margin-bottom:24px;
-}
-.why-choose .choose-left h3:before{
-	position:absolute;
-	content:"";
-	left:0;
-	bottom:0;
-	height:2px;
-	width:50px;
-	background:darkblue;
-}
-.why-choose .choose-left p{
-	margin-bottom:35px;
-}
-.why-choose .choose-left .list{}
-.why-choose .choose-left .list li {
-	color: #868686;
-	margin-bottom: 12px;
-}
-.why-choose .choose-left .list li:last-child{
-	margin-bottom:0px;
-}
-.why-choose .choose-left .list li i{
-	height:15px;
-	width:15px;
-	line-height:15px;
-	text-align:center;
-	background:darkblue;
-	color:#fff;
-	font-size:14px;
-	border-radius:100%;
-	padding-left:2px;
-	margin-right:16px;
-}
-/* Start Faq CSS 
-.why-choose{
-	background:#fff;
-}
-.why-choose .choose-right{
-	height:100%;
-	width:100%;
-	background-image:url('img/video-bg.jpg');
-	background-size:cover;
-	background-position:center;
-	background-repeat:no-repeat;
-	position:relative;
-}
-.why-choose .choose-right .video {
-	color: #fff;
-	height: 70px;
-	width: 70px;
-	line-height: 70px;
-	text-align: center;
-	border-radius: 100%;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -35px;
-	margin-top: -35px;
-	font-size: 21px;
-	background: darkblue;
-	padding-left: 4px;
-}
-.why-choose .choose-right .video:hover{
-	transform:scale(1.1);
-}
-.why-choose .video-image .waves-block .waves {
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	background: #fff;
-	opacity: 0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	border-radius: 100%;
-	-webkit-animation: waves 3s ease-in-out infinite;
-	animation: waves 3s ease-in-out infinite;
-	left: 50%;
-	margin-left: -100px;
-	top: 50%;
-	margin-top: -100px;
-}
-.why-choose .video-image .waves-block .wave-1 {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-.why-choose .video-image .waves-block .wave-2 {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-.why-choose .video-image .waves-block .wave-3 {
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
-/*=======================
-	End Why choose CSS
-=========================*/
 
 /*===============================
 	Start Call to action CSS
@@ -2071,6 +1890,7 @@ p{	color:#2C2D3F;}
 =========================*/
 .blog{
 	background:#fff;
+	
 }
 .blog .blog-title{
 	text-align:center;
@@ -2082,12 +1902,13 @@ p{	color:#2C2D3F;}
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	box-shadow: 0px 0px 10px #00000014;
-
+text-align: center;
+margin:auto ;
 }
-.blog .single-news,.teamPerson img{
-	width:50px;
-	height:50px;
-    border-radius: 50%;
+.blog .single-news img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 	-webkit-transition:all 0.4s ease;
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
@@ -2098,7 +1919,7 @@ p{	color:#2C2D3F;}
 	overflow:hidden;
 }
 .blog .single-news .news-content {
-	text-align: left;
+	
 	background: #fff;
 	z-index: 99;
 	position: relative;
@@ -2125,6 +1946,12 @@ p{	color:#2C2D3F;}
 	visibility:visible;
 	width:100%;
 }
+
+.blog .single-news .news-body{
+justify-items: center;
+align-content: center;
+}
+
 .blog .single-news .news-body h2 {
 	font-size: 18px;
 	font-weight: 600;
