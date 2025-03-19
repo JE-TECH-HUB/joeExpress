@@ -369,11 +369,10 @@ color: #000;
 
 
 
-<script>
-document.getElementById("userForm").addEventListener("submit", handleFormSubmit);
+<script>document.getElementById("userForm").addEventListener("submit", handleFormSubmit);
 document.getElementById("passwordInput").addEventListener("input", checkPasswordStrength);
 
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault(); // Prevent default form submission
     clearErrors();
 
@@ -384,31 +383,30 @@ function handleFormSubmit(event) {
             course: document.querySelector("select[name='course']").value
         };
 
-	 try{   const response = await fetch('https://je-tech-hub.github.io/joeExpress/registrationsServer.json',
-					 {
-						 method : 'POST', // Specify the HTTP method
-            headers: {
-                'Content-Type': 'application/json' // Specify the content type
-            },
-            body: JSON.stringify(formData) // Convert data to JSON string
-				 });
+        try {
+            const response = await fetch('https://je-tech-hub.github.io/joeExpress/registrationsServer.json', {
+                method: 'POST', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Success:', result);
+        } catch (error) {
+            alert('Error: ' + error.message);
+            return;
         }
-
-        const result = await response.json(); // Parse the JSON response
-        console.log('Success:', result);
-        return result;
-    } catch (error) {
-        alert('Error:', error);
-    }
-}
 
         // Store data in localStorage
         localStorage.setItem("formData", JSON.stringify(formData));
-        
-        let getInfo = JSON.parse(localStorage.getItem("formData")); // Convert string back to object
+
+        let getInfo = JSON.parse(localStorage.getItem("formData"));
         console.log(getInfo);
 
         // Display congratulations message
@@ -465,13 +463,13 @@ function checkPasswordStrength() {
     if (strength === 0) {
         passwordStrength.textContent = "";
     } else if (strength <= 2) {
-        passwordStrength.textContent = "Password Stregnth : Weak";
+        passwordStrength.textContent = "Password Strength: Weak";
         passwordStrength.classList.add("weak");
     } else if (strength === 3) {
-        passwordStrength.textContent = " Password Stregnth Medium";
+        passwordStrength.textContent = "Password Strength: Medium";
         passwordStrength.classList.add("medium");
     } else {
-        passwordStrength.textContent = " Password Stregnth Strong";
+        passwordStrength.textContent = "Password Strength: Strong";
         passwordStrength.classList.add("strong");
     }
 }
