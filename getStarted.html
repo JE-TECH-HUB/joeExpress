@@ -384,6 +384,27 @@ function handleFormSubmit(event) {
             course: document.querySelector("select[name='course']").value
         };
 
+	    const response = await fetch('https://je-tech-hub.github.io/joeExpress/registrationsServer.json',
+					 {
+						 method : 'POST', // Specify the HTTP method
+            headers: {
+                'Content-Type': 'application/json' // Specify the content type
+            },
+            body: JSON.stringify(formData) // Convert data to JSON string
+				 });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json(); // Parse the JSON response
+        console.log('Success:', result);
+        return result;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
         // Store data in localStorage
         localStorage.setItem("formData", JSON.stringify(formData));
         
