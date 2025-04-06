@@ -713,35 +713,34 @@ Blanditiis
 </div>
 <div class="row">
 <div class="col-lg-6 col-md-12 col-12">
-<form class="form" action="index.html">
+<form class="form" id="contactForm">
 <div class="row">
-<div class="col-lg-6 col-md-6 col-12">
-<div class="form-group">
-<input name="name" type="text" placeholder="Name">
-</div>
-</div>
-<div class="col-lg-6 col-md-6 col-12">
-<div class="form-group">
-<input name="email" type="email" placeholder="Email">
-</div>
-</div>
-<div class="col-lg-6 col-md-6 col-12">
-<div class="form-group">
-<input name="phone" type="text" placeholder="Phone">
-</div>
-</div>
-<div class="col-lg-12 col-md-12 col-12">
-<div class="form-group">
-<textarea name="message"
-placeholder="Write Your Message Here....."></textarea>
-</div>
-</div>
-
-<div class="col-lg-12 col-md-12 col-12">
-	<div class="form-group">
-	<input type="submit" name="" id="">
-	</div>
-	</div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="form-group">
+          <input name="name" type="text" placeholder="Name" required>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="form-group">
+          <input name="email" type="email" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="form-group">
+          <input name="phone" type="text" placeholder="Phone" required>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="form-group">
+          <textarea name="message" placeholder="Write Your Message Here....." required></textarea>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="form-group">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
+    </div>
 </form>
 
 </div>
@@ -827,6 +826,35 @@ Us</a></li>
 </footer>
 <!--/ End Footer Area -->
 </main>
+
+	<script>
+    // Function to handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevents the form from submitting in the traditional way
+
+      // Collect form data
+      const formData = {
+        name: document.querySelector('[name="name"]').value,
+        email: document.querySelector('[name="email"]').value,
+        phone: document.querySelector('[name="phone"]').value,
+        message: document.querySelector('[name="message"]').value
+      };
+
+      // Convert form data to JSON
+      const formDataJSON = JSON.stringify(formData, null, 2); 
+
+      // Log the JSON data to the console
+      console.log(formDataJSON);
+
+      // For demonstration: If you want to download the JSON as a file (in the browser)
+      const blob = new Blob([formDataJSON], { type: 'application/json' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'formData.json';
+      link.click();
+    });
+  </script>
+	
 <!-- Main Js -->
 <script src="./jscript.js"></script>
 <!-- jquery Min JS -->
