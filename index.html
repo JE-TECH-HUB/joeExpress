@@ -843,6 +843,10 @@ Us</a></li>
       // Convert form data to JSON and log to console
       const formDataJSON = JSON.stringify(formData, null, 2); 
       console.log(formDataJSON);
+
+	    
+      // Clear the input fields after submission
+      document.getElementById('contactForm').reset();
     }); </script>
 	
 <!-- Main Js -->
