@@ -840,20 +840,10 @@ Us</a></li>
         message: document.querySelector('[name="message"]').value
       };
 
-      // Convert form data to JSON
+      // Convert form data to JSON and log to console
       const formDataJSON = JSON.stringify(formData, null, 2); 
-
-      // Log the JSON data to the console
       console.log(formDataJSON);
-
-      // For demonstration: If you want to download the JSON as a file (in the browser)
-      const blob = new Blob([formDataJSON], { type: 'application/json' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'formData.json';
-      link.click();
-    });
-  </script>
+    }); </script>
 	
 <!-- Main Js -->
 <script src="./jscript.js"></script>
