@@ -1109,7 +1109,7 @@ SERVICES
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('/images/contactUsGPT.png');
+	background-image:url("images/contactUsGPT.png");
 	background-size:cover;
 	background-position:center;
 	position:relative;
