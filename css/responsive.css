@@ -208,6 +208,8 @@
 .call-action .content {
 	padding: 0;
 	padding: 70px 0;
+	background: url('images/contactUsGPT.png');
+	backround-size:contain;
 }
 .call-action .content h2 {
 	font-size: 28px;
@@ -560,6 +562,8 @@ margin: 0;}
 .call-action .content {
 	padding: 0;
 	padding: 70px 0;
+		background: url('images/contactUsGPT.png');
+	background-size:contain;
 }
 .call-action .content h2 {
 	font-size: 28px;
